@@ -1,4 +1,4 @@
-// Função da Roleta Animada Real
+// Controle dinâmico da Roleta Realista
 let currentRotation = 0;
 
 function spinRealRoulette() {
@@ -8,22 +8,22 @@ function spinRealRoulette() {
     const btn = document.getElementById('spin-btn');
 
     btn.disabled = true;
-    btn.innerText = "Girando...";
-    centerText.innerText = "...";
-    descDiv.innerText = "Analisando volatilidade da mesa...";
+    btn.innerText = "Girando roda...";
+    centerText.innerText = "🎲";
+    descDiv.innerText = "Acelerando multiplicadores da mesa...";
 
-    // Sorteia um número de voltas completas (entre 4 e 7) + um ângulo extra aleatório
-    const randomDegree = Math.floor(Math.random() * 360) + 1440; 
-    currentRotation += randomDegree;
+    // Gera um ângulo alto de rotação (múltiplas voltas completas + deslocamento aleatório)
+    const randomSpin = Math.floor(Math.random() * 360) + 2160; 
+    currentRotation += randomSpin;
     
     wheel.style.transform = `rotate(${currentRotation}deg)`;
 
     setTimeout(() => {
         const outcomes = [
-            { mult: "1000x", text: "🔥 Multiplicador Máximo de 1000x ativado na sala VIP!" },
-            { mult: "500x", text: "⚡ Excelente momento! 500x liberado nas mesas de alta banca." },
-            { mult: "250x", text: "💎 Sequência de alta frequência detectada: 250x." },
-            { mult: "100x", text: "🚀 Retorno estável de 100x confirmado pelo sistema." }
+            { mult: "1000x", text: "🔥 Incrível! 1000x de multiplicador máximo validado na sessão!" },
+            { mult: "500x", text: "⚡ Excelente! 500x liberado nas mesas de alta volatilidade." },
+            { mult: "250x", text: "💎 Padrão de alta frequência premiado em 250x." },
+            { mult: "100x", text: "🚀 Retorno seguro e consistente de 100x registrado." }
         ];
         
         const selected = outcomes[Math.floor(Math.random() * outcomes.length)];
@@ -32,7 +32,7 @@ function spinRealRoulette() {
         
         btn.disabled = false;
         btn.innerText = "🎲 Girar Novamente";
-    }, 3000);
+    }, 3500);
 }
 
 // Chat Global com Persistência
