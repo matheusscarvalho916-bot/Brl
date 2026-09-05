@@ -5,47 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elite Stats & VIP - Gestão de Banca Avançada</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        amber: {
-                            400: '#fbbf24',
-                            500: '#f59e0b',
-                            600: '#d97706',
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-[#0a0a0a] text-gray-100 font-sans selection:bg-amber-500 selection:text-black min-h-screen flex flex-col justify-between">
 
     <div>
         <header class="border-b border-white/10 bg-[#0a0a0a]/80 backdrop-blur-md sticky top-0 z-50">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-                <div class="flex items-center space-x-2">
-                    <span class="text-xl sm:text-2xl font-black tracking-wider bg-gradient-to-r from-amber-200 via-amber-400 to-amber-600 bg-clip-text text-transparent">
-                        ELITE STATS & VIP
-                    </span>
-                </div>
-                <div>
-                    <a 
-                        href="https://www.89e23.com/?pid=37639165&fromPage=AGENCY_ONE"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-black font-bold px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl shadow-lg shadow-amber-500/20 transition-all duration-300 transform hover:scale-105 text-xs sm:text-base inline-flex items-center gap-2 cursor-pointer"
-                    >
-                        Acessar Plataforma VIP
-                    </a>
-                </div>
+                <span class="text-xl sm:text-2xl font-black tracking-wider bg-gradient-to-r from-amber-200 via-amber-400 to-amber-600 bg-clip-text text-transparent">
+                    ELITE STATS & VIP
+                </span>
+                <a href="https://www.89e23.com/?pid=37639165&fromPage=AGENCY_ONE" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-black font-bold px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl shadow-lg shadow-amber-500/20 transition-all duration-300 transform hover:scale-105 text-xs sm:text-base inline-flex items-center gap-2 cursor-pointer">
+                    Acessar Plataforma VIP
+                </a>
             </div>
         </header>
 
         <section class="relative py-16 lg:py-28 overflow-hidden border-b border-white/5">
-            <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-amber-500/10 via-transparent to-transparent pointer-events-none"></div>
             <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
                 <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs sm:text-sm font-semibold mb-6">
                     PLATAFORMA DE ALTA PERFORMANCE E LIQUIDEZ INSTITUCIONAL
@@ -56,190 +32,50 @@
                 </h1>
                 
                 <p class="text-base sm:text-2xl text-gray-400 max-w-3xl mx-auto mb-10 leading-relaxed">
-                    Ambiente exclusivo para jogadores e investidores que operam com volatilidade controlada, mitigação de riscos e suporte prioritário para grandes bancas.
+                    Ambiente exclusivo para jogadores e investidores que operam com volatilidade controlada e suporte prioritário.
                 </p>
 
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <a 
-                        href="https://www.89e23.com/?pid=37639165&fromPage=AGENCY_ONE"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="w-full sm:w-auto bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 hover:from-amber-300 hover:to-amber-500 text-black font-extrabold text-base sm:text-lg px-8 py-4 sm:py-5 rounded-2xl shadow-2xl shadow-amber-500/30 transition-all transform hover:-translate-y-1 inline-flex items-center justify-center gap-3 cursor-pointer"
-                    >
-                        SOLICITAR ACESSO À MESA VIP
-                    </a>
+                <a href="https://www.89e23.com/?pid=37639165&fromPage=AGENCY_ONE" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 hover:from-amber-300 hover:to-amber-500 text-black font-extrabold text-base sm:text-lg px-10 py-5 rounded-2xl shadow-2xl shadow-amber-500/40 transition-all transform hover:scale-105 inline-flex items-center justify-center gap-3 cursor-pointer">
+                    SOLICITAR ACESSO À MESA VIP
+                </a>
+            </div>
+        </section>
+
+        <section class="py-16 bg-[#0f0f12] border-b border-white/5">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <span class="text-amber-400 text-xs font-bold tracking-widest uppercase mb-2 block">Simulador Interativo</span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold mb-4">Teste os Multiplicadores da Sala VIP</h2>
+                <div class="bg-[#18181b] border border-amber-500/30 p-8 rounded-3xl shadow-2xl relative">
+                    <div id="roulette-result" class="text-4xl sm:text-6xl font-black text-amber-400 mb-6">⚡ 500x VIP</div>
+                    <p id="roulette-desc" class="text-sm text-gray-300 mb-8">Clique abaixo para simular o multiplicador ativo.</p>
+                    <button onclick="spinRoulette()" id="spin-btn" class="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 text-black font-bold px-8 py-3.5 rounded-xl shadow-lg transition-all cursor-pointer">
+                        🎲 Girar Roleta de Multiplicadores
+                    </button>
                 </div>
-
-                <p class="text-xs text-gray-500 mt-4 flex items-center justify-center gap-1">
-                    Transações criptografadas e processamento de grandes valores instantâneo.
-                </p>
             </div>
         </section>
 
         <section class="py-12 sm:py-16 bg-[#111] border-b border-white/5">
             <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-8">
-                    <div class="inline-flex items-center gap-2 text-amber-400 font-semibold text-xs sm:text-sm mb-2">
-                        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping"></span>
-                        CHAT GLOBAL ATIVO EM TEMPO REAL
-                    </div>
                     <h2 class="text-2xl sm:text-3xl font-bold">Comunidade de Análises e Resultados</h2>
-                    <p class="text-gray-400 text-sm mt-1">Converse com outros operadores e acompanhe o fluxo das mesas em tempo real.</p>
                 </div>
-
                 <div class="bg-[#18181b] border border-white/10 rounded-2xl shadow-2xl overflow-hidden flex flex-col h-[400px]">
-                    <div class="bg-[#202025] px-4 py-3 border-b border-white/10 flex items-center justify-between">
-                        <div class="flex items-center gap-2">
-                            <span class="text-sm font-semibold text-gray-200">Sala Global de Alta Volatilidade</span>
-                        </div>
-                        <span class="text-xs text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-full font-medium">
-                            Online Agora
-                        </span>
-                    </div>
-
-                    <div id="chat-messages" class="flex-1 p-4 overflow-y-auto space-y-4">
-                        </div>
-
+                    <div id="chat-messages" class="flex-1 p-4 overflow-y-auto space-y-4"></div>
                     <form id="chat-form" class="p-3 bg-[#202025] border-t border-white/10 flex gap-2">
-                        <input 
-                            type="text" 
-                            id="user-name" 
-                            value="Investidor VIP" 
-                            class="w-1/3 bg-[#111] border border-white/10 rounded-xl px-3 py-2 text-xs sm:text-sm focus:outline-none focus:border-amber-500 text-gray-200"
-                            placeholder="Apelido..."
-                        />
-                        <input 
-                            type="text" 
-                            id="user-input" 
-                            placeholder="Digite sua mensagem..." 
-                            class="flex-1 bg-[#111] border border-white/10 rounded-xl px-3 py-2 text-xs sm:text-sm focus:outline-none focus:border-amber-500 text-gray-200"
-                            required
-                        />
-                        <button 
-                            type="submit" 
-                            class="bg-amber-500 hover:bg-amber-400 text-black px-4 py-2 rounded-xl font-bold transition-all text-sm cursor-pointer"
-                        >
-                            Enviar
-                        </button>
+                        <input type="text" id="user-name" value="Investidor VIP" class="w-1/3 bg-[#111] border border-white/10 rounded-xl px-3 py-2 text-xs sm:text-sm text-gray-200" placeholder="Apelido..." />
+                        <input type="text" id="user-input" placeholder="Digite sua mensagem..." class="flex-1 bg-[#111] border border-white/10 rounded-xl px-3 py-2 text-xs sm:text-sm text-gray-200" required />
+                        <button type="submit" class="bg-amber-500 hover:bg-amber-400 text-black px-4 py-2 rounded-xl font-bold text-sm cursor-pointer">Enviar</button>
                     </form>
                 </div>
-            </div>
-        </section>
-
-        <section class="py-16 sm:py-20 bg-[#0a0a0a]">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-2xl mx-auto mb-16">
-                    <h2 class="text-2xl sm:text-4xl font-extrabold mb-4">Por que grandes apostadores escolhem operar aqui?</h2>
-                    <p class="text-gray-400 text-sm sm:text-base">Infraestrutura construída sob medida para quem busca eficiência, segurança e retorno célere.</p>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="bg-[#141417] border border-white/5 p-8 rounded-3xl relative hover:border-amber-500/50 transition-all duration-300">
-                        <h3 class="text-xl font-bold mb-3 text-amber-400">Saques Expressos e Sem Burocracia</h3>
-                        <p class="text-gray-400 text-sm leading-relaxed">
-                            Liquidez total para premiações elevadas. Retiradas de grandes somas processadas com prioridade absoluta por gerentes dedicados.
-                        </p>
-                    </div>
-
-                    <div class="bg-[#141417] border border-white/5 p-8 rounded-3xl relative hover:border-amber-500/50 transition-all duration-300">
-                        <h3 class="text-xl font-bold mb-3 text-amber-400">Mesas de Alta Volatilidade</h3>
-                        <p class="text-gray-400 text-sm leading-relaxed">
-                            Acesso irrestrito a mesas ao vivo de blackjack, roleta europeia e slots de alta premiação voltados para estratégias institucionais.
-                        </p>
-                    </div>
-
-                    <div class="bg-[#141417] border border-white/5 p-8 rounded-3xl relative hover:border-amber-500/50 transition-all duration-300">
-                        <h3 class="text-xl font-bold mb-3 text-amber-400">Bônus de Liquidez de Banca</h3>
-                        <p class="text-gray-400 text-sm leading-relaxed">
-                            Condições exclusivas de bônus e cashback real proporcional ao volume de depósitos para maximizar sua margem operacional.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-16 sm:py-20 bg-gradient-to-b from-[#0a0a0a] to-[#121215] border-t border-white/5 text-center">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-2xl sm:text-5xl font-extrabold mb-6">Pronto para operar no nível profissional?</h2>
-                <p class="text-gray-400 text-base sm:text-lg mb-10 max-w-2xl mx-auto">
-                    Garanta seu acesso imediato à plataforma oficial de cassino com as vantagens de cadastro exclusivas.
-                </p>
-                <a 
-                    href="https://www.89e23.com/?pid=37639165&fromPage=AGENCY_ONE"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="inline-flex items-center gap-3 bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 hover:from-amber-300 hover:to-amber-500 text-black font-extrabold text-base sm:text-lg px-8 sm:px-10 py-4 sm:py-5 rounded-2xl shadow-2xl shadow-amber-500/40 transition-all transform hover:scale-105 cursor-pointer"
-                >
-                    ACESSAR PLATAFORMA AGORA
-                </a>
             </div>
         </section>
     </div>
 
     <footer class="border-t border-white/10 py-8 bg-[#080808] text-center text-xs text-gray-500">
-        <div class="max-w-7xl mx-auto px-4">
-            <p class="mb-2">Jogue com responsabilidade. Proibido para menores de 18 anos. Conteúdo voltado para entretenimento e análise estatística.</p>
-            <p>© 2026 Elite Stats & VIP. Todos os direitos reservados.</p>
-        </div>
+        <p>© 2026 Elite Stats & VIP. Todos os direitos reservados.</p>
     </footer>
 
-    <script>
-        const chatForm = document.getElementById('chat-form');
-        const userInput = document.getElementById('user-input');
-        const userName = document.getElementById('user-name');
-        const chatMessages = document.getElementById('chat-messages');
-
-        let messages = JSON.parse(localStorage.getItem('chat_messages_vip')) || [
-            { user: "Carlos M. (São Paulo)", text: "Alguém testou a mesa de roleta ao vivo hoje?", time: "18:42" },
-            { user: "Roberto S. (Rio de Janeiro)", text: "Sim, os multiplicadores de alta volatilidade estão pagando bem na sala VIP.", time: "18:45" },
-            { user: "Marcos V. (Curitiba)", text: "O suporte VIP liberou meu saque instantâneo em menos de 2 minutos.", time: "18:50" }
-        ];
-
-        function renderMessages() {
-            chatMessages.innerHTML = '';
-            messages.forEach(msg => {
-                const msgDiv = document.createElement('div');
-                msgDiv.className = "bg-[#222227] p-3 rounded-xl border border-white/5";
-                msgDiv.innerHTML = `
-                    <div class="flex items-center justify-between mb-1">
-                        <span class="text-xs font-bold text-amber-400">${escapeHtml(msg.user)}</span>
-                        <span class="text-[10px] text-gray-500">${msg.time}</span>
-                    </div>
-                    <p class="text-sm text-gray-200">${escapeHtml(msg.text)}</p>
-                `;
-                chatMessages.appendChild(msgDiv);
-            });
-            chatMessages.scrollTop = chatMessages.scrollHeight;
-        }
-
-        chatForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            const text = userInput.value.trim();
-            const name = userName.value.trim() || "Membro VIP";
-            if (!text) return;
-
-            const now = new Date();
-            const timeString = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-
-            messages.push({ user: name, text: text, time: timeString });
-            localStorage.setItem('chat_messages_vip', JSON.stringify(messages));
-
-            renderMessages();
-            userInput.value = '';
-        });
-
-        function escapeHtml(text) {
-            const map = {
-                '&': '&amp;',
-                '<': '&lt;',
-                '>': '&gt;',
-                '"': '&quot;',
-                "'": '&#039;'
-            };
-            return text.replace(/[&<>"']/g, function(m) { return map[m]; });
-        }
-
-        renderMessages();
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
