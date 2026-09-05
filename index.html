@@ -33,10 +33,10 @@
                 </div>
                 <div>
                     <a 
-                        href="https://www.brlbet222.com/?id=641832209"
+                        href="https://brlbet14.com/?id=641832209"
                         target="_blank"
                         rel="noopener noreferrer"
-                        class="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-black font-bold px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl shadow-lg shadow-amber-500/20 transition-all duration-300 transform hover:scale-105 text-xs sm:text-base inline-flex items-center gap-2"
+                        class="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-black font-bold px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl shadow-lg shadow-amber-500/20 transition-all duration-300 transform hover:scale-105 text-xs sm:text-base inline-flex items-center gap-2 cursor-pointer"
                     >
                         Acessar Plataforma VIP
                     </a>
@@ -61,10 +61,10 @@
 
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
                     <a 
-                        href="https://www.brlbet222.com/?id=641832209"
+                        href="https://brlbet14.com/?id=641832209"
                         target="_blank"
                         rel="noopener noreferrer"
-                        class="w-full sm:w-auto bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 hover:from-amber-300 hover:to-amber-500 text-black font-extrabold text-base sm:text-lg px-8 py-4 sm:py-5 rounded-2xl shadow-2xl shadow-amber-500/30 transition-all transform hover:-translate-y-1 inline-flex items-center justify-center gap-3"
+                        class="w-full sm:w-auto bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 hover:from-amber-300 hover:to-amber-500 text-black font-extrabold text-base sm:text-lg px-8 py-4 sm:py-5 rounded-2xl shadow-2xl shadow-amber-500/30 transition-all transform hover:-translate-y-1 inline-flex items-center justify-center gap-3 cursor-pointer"
                     >
                         SOLICITAR ACESSO À MESA VIP
                     </a>
@@ -98,28 +98,7 @@
                     </div>
 
                     <div id="chat-messages" class="flex-1 p-4 overflow-y-auto space-y-4">
-                        <div class="bg-[#222227] p-3 rounded-xl border border-white/5">
-                            <div class="flex items-center justify-between mb-1">
-                                <span class="text-xs font-bold text-amber-400">Carlos M. (São Paulo)</span>
-                                <span class="text-[10px] text-gray-500">18:42</span>
-                            </div>
-                            <p class="text-sm text-gray-200">Alguém testou a mesa de roleta ao vivo hoje?</p>
                         </div>
-                        <div class="bg-[#222227] p-3 rounded-xl border border-white/5">
-                            <div class="flex items-center justify-between mb-1">
-                                <span class="text-xs font-bold text-amber-400">Roberto S. (Rio de Janeiro)</span>
-                                <span class="text-[10px] text-gray-500">18:45</span>
-                            </div>
-                            <p class="text-sm text-gray-200">Sim, os multiplicadores de alta volatilidade estão pagando bem na sala VIP.</p>
-                        </div>
-                        <div class="bg-[#222227] p-3 rounded-xl border border-white/5">
-                            <div class="flex items-center justify-between mb-1">
-                                <span class="text-xs font-bold text-amber-400">Marcos V. (Curitiba)</span>
-                                <span class="text-[10px] text-gray-500">18:50</span>
-                            </div>
-                            <p class="text-sm text-gray-200">O suporte VIP liberou meu saque instantâneo em menos de 2 minutos.</p>
-                        </div>
-                    </div>
 
                     <form id="chat-form" class="p-3 bg-[#202025] border-t border-white/10 flex gap-2">
                         <input 
@@ -138,7 +117,7 @@
                         />
                         <button 
                             type="submit" 
-                            class="bg-amber-500 hover:bg-amber-400 text-black px-4 py-2 rounded-xl font-bold transition-all text-sm"
+                            class="bg-amber-500 hover:bg-amber-400 text-black px-4 py-2 rounded-xl font-bold transition-all text-sm cursor-pointer"
                         >
                             Enviar
                         </button>
@@ -186,10 +165,10 @@
                     Garanta seu acesso imediato à plataforma oficial de cassino com as vantagens de cadastro exclusivas.
                 </p>
                 <a 
-                    href="https://www.brlbet222.com/?id=641832209"
+                    href="https://brlbet14.com/?id=641832209"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="inline-flex items-center gap-3 bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 hover:from-amber-300 hover:to-amber-500 text-black font-extrabold text-base sm:text-lg px-8 sm:px-10 py-4 sm:py-5 rounded-2xl shadow-2xl shadow-amber-500/40 transition-all transform hover:scale-105"
+                    class="inline-flex items-center gap-3 bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 hover:from-amber-300 hover:to-amber-500 text-black font-extrabold text-base sm:text-lg px-8 sm:px-10 py-4 sm:py-5 rounded-2xl shadow-2xl shadow-amber-500/40 transition-all transform hover:scale-105 cursor-pointer"
                 >
                     ACESSAR PLATAFORMA AGORA
                 </a>
@@ -210,6 +189,30 @@
         const userName = document.getElementById('user-name');
         const chatMessages = document.getElementById('chat-messages');
 
+        // Mensagens padrão iniciais caso o storage esteja vazio
+        let messages = JSON.parse(localStorage.getItem('chat_messages_vip')) || [
+            { user: "Carlos M. (São Paulo)", text: "Alguém testou a mesa de roleta ao vivo hoje?", time: "18:42" },
+            { user: "Roberto S. (Rio de Janeiro)", text: "Sim, os multiplicadores de alta volatilidade estão pagando bem na sala VIP.", time: "18:45" },
+            { user: "Marcos V. (Curitiba)", text: "O suporte VIP liberou meu saque instantâneo em menos de 2 minutos.", time: "18:50" }
+        ];
+
+        function renderMessages() {
+            chatMessages.innerHTML = '';
+            messages.forEach(msg => {
+                const msgDiv = document.createElement('div');
+                msgDiv.className = "bg-[#222227] p-3 rounded-xl border border-white/5";
+                msgDiv.innerHTML = `
+                    <div class="flex items-center justify-between mb-1">
+                        <span class="text-xs font-bold text-amber-400">${escapeHtml(msg.user)}</span>
+                        <span class="text-[10px] text-gray-500">${msg.time}</span>
+                    </div>
+                    <p class="text-sm text-gray-200">${escapeHtml(msg.text)}</p>
+                `;
+                chatMessages.appendChild(msgDiv);
+            });
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
         chatForm.addEventListener('submit', function(e) {
             e.preventDefault();
             const text = userInput.value.trim();
@@ -219,18 +222,10 @@
             const now = new Date();
             const timeString = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
 
-            const msgDiv = document.createElement('div');
-            msgDiv.className = "bg-[#222227] p-3 rounded-xl border border-white/5";
-            msgDiv.innerHTML = `
-                <div class="flex items-center justify-between mb-1">
-                    <span class="text-xs font-bold text-amber-400">${escapeHtml(name)}</span>
-                    <span class="text-[10px] text-gray-500">${timeString}</span>
-                </div>
-                <p class="text-sm text-gray-200">${escapeHtml(text)}</p>
-            `;
+            messages.push({ user: name, text: text, time: timeString });
+            localStorage.setItem('chat_messages_vip', JSON.stringify(messages));
 
-            chatMessages.appendChild(msgDiv);
-            chatMessages.scrollTop = chatMessages.scrollHeight;
+            renderMessages();
             userInput.value = '';
         });
 
@@ -244,6 +239,9 @@
             };
             return text.replace(/[&<>"']/g, function(m) { return map[m]; });
         }
+
+        // Renderiza na inicialização
+        renderMessages();
     </script>
 </body>
 </html>
